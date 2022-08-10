@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  box-sizing: border-box;
+  background-color: #090b1a;
+  padding: 5.5rem, 1.5rem;
+  font-size: 0.9375rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.center-flex, .component, .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  height: 100vh;
+}
+
+.component {
+  width: 20.4375rem;
+  height: 48.75rem;
+  background-color: #1B1937;
+  border-radius: 0.5rem;
+}
+
+.header-img {
+  order: 1;
+  height: 30.7692307692%;
+  width: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-image: url(../images/image-header-mobile.jpg);
+  background-size: cover;
+  background-color: #AB5CDB;
+  background-blend-mode: multiply;
+}
+
+.component-typography {
+  height: 69.2307692308%;
+  padding: 2.5rem, 2rem, 2rem, 2rem;
+  order: 2;
+}
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+em {
+  color: #AB5CDB;
+}
+
+.attribution {
+  position: fixed;
+  left: 50%;
+  bottom: 0.3125rem;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}/*# sourceMappingURL=style.css.map */

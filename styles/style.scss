@@ -1,0 +1,109 @@
+@use "sass:math";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+$inter: 'Inter', sans-serif;
+$lexend: 'Lexend Deca', sans-serif;
+$purple: #AB5CDB;
+$light-gray: rgb(255, 255, 255, .75);
+$dark-gray: rgb(255, 255, 255, .6);
+$rem-base: 16px;
+
+
+//Function borrowed from Foundation, thanks Loosie94 of StackOverflow
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@function convert-to-rem($value, $base-value: $rem-base)  {
+    $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+    @if ($value == 0rem) { 
+        $value: 0;
+     } // Turn 0rem into 0
+    @return $value;
+}
+
+@function rem-calc($values, $base-value: $rem-base) {
+    $max: length($values);
+    @if $max == 1 { 
+        @return convert-to-rem(nth($values, 1), $base-value); 
+    }
+    $remValues: ();
+    @for $i from 1 through $max {
+        $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+    }
+    @return $remValues;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    box-sizing: border-box;
+    background-color: #090b1a;
+    padding: rem-calc(88), rem-calc(24);
+    font-size: rem-calc(15);
+    font-family: $inter;
+    font-weight: 400;
+    text-align: center;
+    color: $light-gray;
+}
+
+.center-flex {
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    @extend .center-flex;
+    height: 100vh;
+}
+
+.component {
+    @extend .center-flex;
+    width: rem-calc(327);
+    height: rem-calc(780);
+    background-color: #1B1937;
+    border-radius: rem-calc(8);
+}
+
+.header-img {
+    order: 1;
+    height: math.percentage(math.div(240px,780px));
+    width: 100%;
+    border-radius: rem-calc(8) rem-calc(8) 0 0;
+    background-image: url(../images/image-header-mobile.jpg);
+    background-size: cover;
+    background-color: $purple;
+    background-blend-mode: multiply;
+}
+
+.component-typography {
+    height: math.percentage(math.div(540px,780px));  
+    padding: rem-calc(40), rem-calc(32), rem-calc(32), rem-calc(32);
+    order: 2;
+}
+
+h1 {
+    font-size: rem-calc(28);
+    line-height: rem-calc(32);
+    font-family: $inter;
+    font-weight: 700;
+    color: white;
+}
+
+em {
+    color: $purple;
+}
+
+.attribution {
+    position: fixed;
+    left: 50%;
+    bottom: rem-calc(5);
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+
