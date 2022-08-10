@@ -10,15 +10,11 @@ html, body {
   color: rgba(255, 255, 255, 0.75);
 }
 
-.container {
-  margin: 0 auto;
-}
-
-.component {
+.center-flex, .component-typography, .component, .container {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 h1 {

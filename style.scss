@@ -15,15 +15,23 @@ html, body {
     color: $gray;
 }
 
+.center-flex {
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    flex-direction: column;
+}
+
 .container {
-    margin: 0 auto;
+    @extend .center-flex;
 }
 
 .component {
-    display: flex;
-    flex-direction: row;
-    align-items: center;    
-    justify-content: center;
+    @extend .center-flex;
+}
+
+.component-typography {
+    @extend .center-flex;
 }
 
 h1 {
