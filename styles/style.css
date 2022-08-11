@@ -7,7 +7,6 @@
 html, body {
   box-sizing: border-box;
   background-color: #090b1a;
-  padding: 5.5rem, 1.5rem;
   font-size: 0.9375rem;
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -23,7 +22,7 @@ html, body {
 }
 
 .container {
-  height: 100vh;
+  height: 100%;
 }
 
 .component {
@@ -31,6 +30,7 @@ html, body {
   height: 48.75rem;
   background-color: #1B1937;
   border-radius: 0.5rem;
+  margin: 5.5rem 1.5rem;
 }
 
 .header-img {
@@ -46,7 +46,7 @@ html, body {
 
 .component-typography {
   height: 69.2307692308%;
-  padding: 2.5rem, 2rem, 2rem, 2rem;
+  padding: 2.5rem 2rem 0 2rem;
   order: 2;
 }
 
@@ -58,8 +58,26 @@ h1 {
   color: white;
 }
 
+h2, .no-padding-h2 {
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.5625rem;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0.125rem 0 1.5rem 0;
+  text-transform: uppercase;
+}
+
+.no-padding-h2 {
+  padding: 0.125rem 0 0 0;
+}
+
 em {
   color: #AB5CDB;
+}
+
+p {
+  padding: 1rem 0 2.5rem 0;
 }
 
 .attribution {
@@ -68,4 +86,9 @@ em {
   bottom: 0.3125rem;
   transform: translate(-50%, -50%);
   margin: 0 auto;
+  font-size: 0.625rem;
+}
+
+.attribution a {
+  color: #AB5CDB;
 }/*# sourceMappingURL=style.css.map */
