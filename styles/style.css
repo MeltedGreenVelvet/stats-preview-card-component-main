@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+/*
+---------------------
+DEFAULTS
+---------------------
+*/
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +18,12 @@ html, body {
   background-color: #090b1a;
 }
 
-.center-flex, .component, .container {
+/*
+---------------------
+MOBILE COMPONENT STRUCTURE
+---------------------
+*/
+.center-flex, .stat-numbers-flex, .component, .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,6 +59,11 @@ html, body {
   order: 2;
 }
 
+/*
+---------------------
+MOBILE TYPOGRAPHY
+---------------------
+*/
 h1 {
   font-size: 1.75rem;
   font-family: "Inter", sans-serif;
@@ -94,4 +109,43 @@ em {
 
 .attribution a {
   color: #AB5CDB;
+}
+
+@media (min-width: 1200px) {
+  .center-flex, .container, .component, .stat-numbers-flex {
+    flex-direction: row;
+  }
+  .container {
+    height: 100vh;
+  }
+  .component, .header-img {
+    height: 27.875rem;
+  }
+  .component {
+    width: 69.375rem;
+  }
+  .header-img {
+    min-width: 48.6486486486%;
+    order: 2;
+  }
+  .component-typography {
+    max-width: 51.3513513514%;
+    padding: 4.4375rem 5.9375rem 3.6875rem 4.5rem;
+    order: 1;
+    text-align: left;
+  }
+  .stat-numbers-flex {
+    align-items: center;
+    justify-content: space-between;
+  }
+  h2, .no-padding-h2 {
+    padding: 0;
+  }
+  p {
+    padding: 1.5625rem 1.84375rem 4.5rem 0;
+  }
+  .catch-phrase {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
 }/*# sourceMappingURL=style.css.map */

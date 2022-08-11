@@ -34,6 +34,13 @@ $rem-base: 16px;
     @return $remValues;
 }
 
+
+/*
+---------------------
+DEFAULTS
+---------------------
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -47,6 +54,12 @@ html, body {
     text-align: center;
     background-color: #090b1a;
 }
+
+/*
+---------------------
+MOBILE COMPONENT STRUCTURE
+---------------------
+*/
 
 .center-flex {
     display: flex;
@@ -85,6 +98,16 @@ html, body {
     padding: rem-calc(40 32 32 32);
     order: 2;
 }
+
+.stat-numbers-flex {
+    @extend .center-flex
+}
+
+/*
+---------------------
+MOBILE TYPOGRAPHY
+---------------------
+*/
 
 h1 {
     font-size: rem-calc(28);
@@ -134,3 +157,51 @@ em {
     color: $purple;
 }
 
+@media (min-width: 1200px){
+
+    .center-flex {
+        flex-direction: row;
+    }
+
+    .container {
+        height: 100vh;
+    }
+
+    .component, .header-img {
+        height: rem-calc(446);
+    }
+
+    .component {
+        width: rem-calc(1110);
+    }
+
+    .header-img {
+        min-width: math.percentage(math.div(540px,1110px));
+        order: 2;
+    }
+
+    .component-typography {
+        max-width: math.percentage(math.div(570px,1110px));  
+        padding: rem-calc(71 95 59 72);
+        order: 1;
+        text-align: left;
+    }
+
+    .stat-numbers-flex {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    h2, .no-padding-h2 {
+        padding: 0;
+    }
+
+    p {
+        padding: rem-calc(25 29.5 72 0);
+    }
+
+    .catch-phrase {
+        font-size: rem-calc(36);
+        line-height: rem-calc(44);
+    }
+}
