@@ -35,24 +35,24 @@ $rem-base: 16px;
 }
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 html, body {
     box-sizing: border-box;
-    background-color: #090b1a;
     font-family: $inter;
     font-weight: 400;
-    text-align: center;
     color: $light-gray;
+    text-align: center;
+    background-color: #090b1a;
 }
 
 .center-flex {
     display: flex;
+    flex-direction: column;
     align-items: center;    
     justify-content: center;
-    flex-direction: column;
 }
 
 .container {
@@ -60,24 +60,24 @@ html, body {
     height: 100%;
 }
 
+.component, .header-img {
+    width: rem-calc(327);
+}
+
 .component {
     @extend .center-flex;
-    width: rem-calc(327);
-    height: rem-calc(780);
     background-color: #1B1937;
+    height: rem-calc(780);
     border-radius: rem-calc(8);
     margin: rem-calc(88 24);
 }
 
 .header-img {
-    order: 1;
-    min-height: math.percentage(math.div(240px,780px));
-    width: rem-calc(327);
-    border-radius: rem-calc(8 8 0 0);
-    background-image: url(../images/image-header-mobile.jpg);
-    background-size: cover;
-    background-color: $purple;
+    background: $purple url("../images/image-header-mobile.jpg") center center / cover;
     background-blend-mode: multiply;
+    min-height: math.percentage(math.div(240px,780px));
+    border-radius: rem-calc(8 8 0 0);
+    order: 1;
 }
 
 .component-typography {
@@ -88,20 +88,23 @@ html, body {
 
 h1 {
     font-size: rem-calc(28);
-    line-height: rem-calc(32);
     font-family: $inter;
     font-weight: 700;
+    line-height: rem-calc(32);
     color: white;
 }
 
+h2, p {
+    line-height: rem-calc(25);
+}
+
 h2 {
-    letter-spacing: 1px;
     font-size: rem-calc(12);
     font-family: $lexend;
-    line-height: rem-calc(25);
     color: $dark-gray;
-    padding: rem-calc(3 0 24 0);
+    letter-spacing: 1px;
     text-transform: uppercase;
+    padding: rem-calc(3 0 24 0);
 }
 
 .no-padding-h2 {
@@ -109,24 +112,22 @@ h2 {
     padding: rem-calc(2 0 0 0);
 }
 
-em {
-    font-style: normal;
-    color: $purple;
+p {
+    font-size: rem-calc(15);
+    padding: rem-calc(16 0 40 0);
 }
 
-p {
-    padding: rem-calc(16 0 40 0);
-    font-size: rem-calc(15);
-    line-height: rem-calc(25);
+em {
+    color: $purple;
+    font-style: normal;
 }
 
 .attribution {
+    font-size: rem-calc(10);
     position: fixed;
     left: 50%;
     bottom: rem-calc(5);
     transform: translate(-50%, -50%);
-    margin: 0 auto;
-    font-size: rem-calc(10);
 }
 
 .attribution a {

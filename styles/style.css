@@ -1,46 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 html, body {
   box-sizing: border-box;
-  background-color: #090b1a;
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  text-align: center;
   color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  background-color: #090b1a;
 }
 
 .center-flex, .component, .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
 
 .container {
   height: 100%;
 }
 
-.component {
+.component, .header-img {
   width: 20.4375rem;
-  height: 48.75rem;
+}
+
+.component {
   background-color: #1B1937;
+  height: 48.75rem;
   border-radius: 0.5rem;
   margin: 5.5rem 1.5rem;
 }
 
 .header-img {
-  order: 1;
-  min-height: 30.7692307692%;
-  width: 20.4375rem;
-  border-radius: 0.5rem 0.5rem 0 0;
-  background-image: url(../images/image-header-mobile.jpg);
-  background-size: cover;
-  background-color: #AB5CDB;
+  background: #AB5CDB url("../images/image-header-mobile.jpg") center center/cover;
   background-blend-mode: multiply;
+  min-height: 30.7692307692%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  order: 1;
 }
 
 .component-typography {
@@ -51,44 +51,45 @@ html, body {
 
 h1 {
   font-size: 1.75rem;
-  line-height: 2rem;
   font-family: "Inter", sans-serif;
   font-weight: 700;
+  line-height: 2rem;
   color: white;
 }
 
+h2, .no-padding-h2, p {
+  line-height: 1.5625rem;
+}
+
 h2, .no-padding-h2 {
-  letter-spacing: 1px;
   font-size: 0.75rem;
   font-family: "Lexend Deca", sans-serif;
-  line-height: 1.5625rem;
   color: rgba(255, 255, 255, 0.6);
-  padding: 0.1875rem 0 1.5rem 0;
+  letter-spacing: 1px;
   text-transform: uppercase;
+  padding: 0.1875rem 0 1.5rem 0;
 }
 
 .no-padding-h2 {
   padding: 0.125rem 0 0 0;
 }
 
-em {
-  font-style: normal;
-  color: #AB5CDB;
+p {
+  font-size: 0.9375rem;
+  padding: 1rem 0 2.5rem 0;
 }
 
-p {
-  padding: 1rem 0 2.5rem 0;
-  font-size: 0.9375rem;
-  line-height: 1.5625rem;
+em {
+  color: #AB5CDB;
+  font-style: normal;
 }
 
 .attribution {
+  font-size: 0.625rem;
   position: fixed;
   left: 50%;
   bottom: 0.3125rem;
   transform: translate(-50%, -50%);
-  margin: 0 auto;
-  font-size: 0.625rem;
 }
 
 .attribution a {
