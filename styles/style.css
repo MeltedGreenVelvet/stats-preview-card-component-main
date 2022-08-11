@@ -7,7 +7,6 @@
 html, body {
   box-sizing: border-box;
   background-color: #090b1a;
-  font-size: 0.9375rem;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   text-align: center;
@@ -35,8 +34,8 @@ html, body {
 
 .header-img {
   order: 1;
-  height: 30.7692307692%;
-  width: 100%;
+  min-height: 30.7692307692%;
+  width: 20.4375rem;
   border-radius: 0.5rem 0.5rem 0 0;
   background-image: url(../images/image-header-mobile.jpg);
   background-size: cover;
@@ -45,8 +44,8 @@ html, body {
 }
 
 .component-typography {
-  height: 69.2307692308%;
-  padding: 2.5rem 2rem 0 2rem;
+  max-height: 69.2307692308%;
+  padding: 2.5rem 2rem 2rem 2rem;
   order: 2;
 }
 
@@ -64,7 +63,7 @@ h2, .no-padding-h2 {
   font-family: "Lexend Deca", sans-serif;
   line-height: 1.5625rem;
   color: rgba(255, 255, 255, 0.6);
-  padding: 0.125rem 0 1.5rem 0;
+  padding: 0.1875rem 0 1.5rem 0;
   text-transform: uppercase;
 }
 
@@ -73,11 +72,14 @@ h2, .no-padding-h2 {
 }
 
 em {
+  font-style: normal;
   color: #AB5CDB;
 }
 
 p {
   padding: 1rem 0 2.5rem 0;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
 }
 
 .attribution {

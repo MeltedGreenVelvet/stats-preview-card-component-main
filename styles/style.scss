@@ -42,7 +42,6 @@ $rem-base: 16px;
 html, body {
     box-sizing: border-box;
     background-color: #090b1a;
-    font-size: rem-calc(15);
     font-family: $inter;
     font-weight: 400;
     text-align: center;
@@ -72,19 +71,18 @@ html, body {
 
 .header-img {
     order: 1;
-    height: math.percentage(math.div(240px,780px));
-    width: 100%;
-    border-radius: rem-calc(8) rem-calc(8) 0 0;
+    min-height: math.percentage(math.div(240px,780px));
+    width: rem-calc(327);
+    border-radius: rem-calc(8 8 0 0);
     background-image: url(../images/image-header-mobile.jpg);
     background-size: cover;
     background-color: $purple;
     background-blend-mode: multiply;
-    
 }
 
 .component-typography {
-    height: math.percentage(math.div(540px,780px));  
-    padding: rem-calc(40 32 0 32);
+    max-height: math.percentage(math.div(540px,780px));  
+    padding: rem-calc(40 32 32 32);
     order: 2;
 }
 
@@ -102,7 +100,7 @@ h2 {
     font-family: $lexend;
     line-height: rem-calc(25);
     color: $dark-gray;
-    padding: rem-calc(2 0 24 0);
+    padding: rem-calc(3 0 24 0);
     text-transform: uppercase;
 }
 
@@ -112,11 +110,14 @@ h2 {
 }
 
 em {
+    font-style: normal;
     color: $purple;
 }
 
 p {
     padding: rem-calc(16 0 40 0);
+    font-size: rem-calc(15);
+    line-height: rem-calc(25);
 }
 
 .attribution {
